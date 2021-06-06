@@ -34,7 +34,7 @@ export default function Home() {
         {/* Home Section */}
         <section className={styles.home} id="home"
           style={{
-            backgroundImage: "url(/img/BG_Yellow.webp)",
+            backgroundImage: "url(/img/BG_Yellow.png)",
             backgroundSize: "cover",
           }}>
           <div className={styles.heroBanner}>

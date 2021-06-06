@@ -51,7 +51,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer} id="contact-us">
       <div className={styles.footerImage}>
-        <img src="/img/badge.webp" alt="Footer Badge"/>
+        <img src="/img/badge.png" alt="Footer Badge"/>
       </div>
       <div className={styles.footerForm}>
         <form onSubmit={handleEmailSubmit}>
