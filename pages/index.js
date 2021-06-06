@@ -34,7 +34,7 @@ export default function Home() {
         {/* Home Section */}
         <section className={styles.home} id="home"
           style={{
-            backgroundImage: "url(/img/BG_Yellow.png)",
+            backgroundImage: "url(/img/BG_Yellow.webp)",
             backgroundSize: "cover",
           }}>
           <div className={styles.heroBanner}>
@@ -66,7 +66,7 @@ export default function Home() {
 
             {/* Creative Content */}
             <figure className={styles.servicesCard}>
-              <img src="/img/windows_bar_green.png" alt="Creative Content" />
+              <img src="/img/windows_bar_green.webp" alt="Creative Content" />
               <figcaption className={styles.cardContent}>
                 <h2>Creative Content</h2>
                 <p>
@@ -80,7 +80,7 @@ export default function Home() {
 
             {/* Social Media Management */}
             <figure className={styles.servicesCard}>
-              <img src="/img/windows_bar_orange.png" alt="Social Media Management" />
+              <img src="/img/windows_bar_orange.webp" alt="Social Media Management" />
               <figcaption className={styles.cardContent}>
                 <h2>Social Media Management</h2>
                 <p>
@@ -98,7 +98,7 @@ export default function Home() {
 
             {/* Digital Campaign */}
             <figure className={styles.servicesCard}>
-              <img src="/img/windows_bar_red.png" alt="Digital Campaign" />
+              <img src="/img/windows_bar_red.webp" alt="Digital Campaign" />
               <figcaption className={styles.cardContent}>
                 <h2>Digital Campaign</h2>
                 <p>
@@ -112,7 +112,7 @@ export default function Home() {
 
             {/* Media Buying */}
             <figure className={styles.servicesCard}>
-              <img src="/img/windows_bar_blue.png" alt="Media Buying" />
+              <img src="/img/windows_bar_blue.webp" alt="Media Buying" />
               <figcaption className={styles.cardContent}>
                 <h2>Media Buying</h2>
                 <p>

@@ -66,7 +66,7 @@ const Navbar = ({ toggleSidebar }) => {
           duration={500}
           name="seruni-logo"
         >
-          <img src="/img/logo_seruni.png" alt="Seruni Logo"/>
+          <img src="/img/logo_seruni.webp" alt="Seruni Logo"/>
         </Link>
         <Link
           activeClass="active"
@@ -108,7 +108,7 @@ const Navbar = ({ toggleSidebar }) => {
           duration={500}
           name="seruni-logo-mobile"
         >
-          <img src="/img/logo_seruni.png" alt="Seruni Logo" />
+          <img src="/img/logo_seruni.webp" alt="Seruni Logo" />
         </Link>
       </nav>
     </header>
