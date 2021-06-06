@@ -1,16 +1,62 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: 'Lilita One';
+  src: local('Lilita One'), url('~/fonts/LilitaOne-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: 'Open Sans';
+  src: url('~/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('~/fonts/OpenSans-Semibold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('~/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:wght@700;800&display=swap'); */
 
 * {
+  font-size: 16px;
+  color: #333333;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header.scrolled {
+  top: -100%;
+}
+
+header.show {
+  top: 0;
+  background: #eebc25;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
+.slide {
+  opacity: 0;
+  transition: 350ms ease-in;
+}
+
+.slide.active {
+  opacity: 1;
 }
