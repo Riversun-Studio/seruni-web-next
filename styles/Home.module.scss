@@ -131,9 +131,10 @@
       position: relative;
       z-index: 1;
       background: transparent;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 150px;
+      align-items: flex-start;
       justify-content: center;
       text-align: center;
       padding-top: 0;
@@ -182,6 +183,16 @@
           width: 100%;
           height: auto;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) {
+  .App {
+    .body {
+      .ourWork {
+        grid-template-rows: 1fr 350px;
       }
     }
   }
@@ -341,6 +352,8 @@
       }
 
       .ourWork {
+        grid-template-rows: 1fr 475px;
+
         h1 {
           font-size: 7rem;
         }

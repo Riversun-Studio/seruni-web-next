@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import Image from 'next/image'
 import styles from './Navbar.module.scss'
 import { Link } from "react-scroll"
 import { HiMenu } from "react-icons/hi"
@@ -67,7 +66,7 @@ const Navbar = ({ toggleSidebar }) => {
           duration={500}
           name="seruni-logo"
         >
-          <Image src="/img/logo_seruni.png" alt="Seruni Logo" width={100} height={18} />
+          <img src="/img/logo_seruni.png" alt="Seruni Logo"/>
         </Link>
         <Link
           activeClass="active"
@@ -109,7 +108,7 @@ const Navbar = ({ toggleSidebar }) => {
           duration={500}
           name="seruni-logo-mobile"
         >
-          <Image src="/img/logo_seruni.png" alt="Seruni Logo" width={100} height={18} />
+          <img src="/img/logo_seruni.png" alt="Seruni Logo" />
         </Link>
       </nav>
     </header>

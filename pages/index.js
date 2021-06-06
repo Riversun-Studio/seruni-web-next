@@ -6,7 +6,6 @@ import ImageSlider from '../components/ImageSlider/ImageSlider'
 import MetaTags from '../components/MetaTags/MetaTags'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 // import ReactGA from 'react-ga'
 // ReactGA.initialize('UA-1229204270-1')
@@ -25,7 +24,7 @@ export default function Home() {
 
   return (
     <div className={styles.App}>
-      <MetaTags/>
+      <MetaTags />
       <Navbar toggleSidebar={handleToggleSidebar} />
       <Sidebar closeSidebar={closeSidebar} isSidebarOpen={sidebar} />
       <section
@@ -39,7 +38,7 @@ export default function Home() {
             backgroundSize: "cover",
           }}>
           <div className={styles.heroBanner}>
-            <Image src="/img/seruni-sticker.webp" alt="Seruni Banner Sticker" width={1051} height={431} />
+            <img src="/img/seruni-sticker.webp" alt="Seruni Banner Sticker" />
           </div>
           <div className={styles.subtitle}>
             <h1>About Us</h1>
@@ -67,7 +66,7 @@ export default function Home() {
 
             {/* Creative Content */}
             <figure className={styles.servicesCard}>
-              <Image src="/img/windows_bar_green.png" alt="Creative Content" width={444} height={355} />
+              <img src="/img/windows_bar_green.png" alt="Creative Content" />
               <figcaption className={styles.cardContent}>
                 <h2>Creative Content</h2>
                 <p>
@@ -81,7 +80,7 @@ export default function Home() {
 
             {/* Social Media Management */}
             <figure className={styles.servicesCard}>
-              <Image src="/img/windows_bar_orange.png" alt="Social Media Management" width={444} height={355} />
+              <img src="/img/windows_bar_orange.png" alt="Social Media Management" />
               <figcaption className={styles.cardContent}>
                 <h2>Social Media Management</h2>
                 <p>
@@ -94,12 +93,12 @@ export default function Home() {
 
             {/* Digital Campaign */}
             <figure className={styles.sectionIllustration}>
-              <Image src="/img/person_image.webp" alt="Our Service Mobile Illustration" width={388} height={462} />
+              <img src="/img/person_image.webp" alt="Our Service Mobile Illustration" />
             </figure>
 
             {/* Digital Campaign */}
             <figure className={styles.servicesCard}>
-              <Image src="/img/windows_bar_red.png" alt="Digital Campaign" width={444} height={355} />
+              <img src="/img/windows_bar_red.png" alt="Digital Campaign" />
               <figcaption className={styles.cardContent}>
                 <h2>Digital Campaign</h2>
                 <p>
@@ -113,7 +112,7 @@ export default function Home() {
 
             {/* Media Buying */}
             <figure className={styles.servicesCard}>
-              <Image src="/img/windows_bar_blue.png" alt="Media Buying" width={444} height={355} />
+              <img src="/img/windows_bar_blue.png" alt="Media Buying" />
               <figcaption className={styles.cardContent}>
                 <h2>Media Buying</h2>
                 <p>
@@ -136,7 +135,7 @@ export default function Home() {
         <section className={styles.clients}>
           <h1>Our Clients</h1>
           <div className={styles.clientImage}>
-            <Image src="/img/clients.webp" alt="Our Clients" width={1467} height={559} intrinsic="true" />
+            <img src="/img/clients.webp" alt="Our Clients" />
           </div>
         </section>
       </section>

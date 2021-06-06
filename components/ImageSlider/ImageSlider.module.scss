@@ -23,7 +23,7 @@
 
   .sliderControl {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     display: flex;
     position: absolute;
     top: 0;
@@ -51,15 +51,36 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .sliderContainer {
+    div {
+      img {
+        max-width: 700px;
+      }
+    }
+
     .sliderControl {
+      max-width: 700px;
       padding: 1.5rem;
       button {
         svg {
           font-size: 3.5rem;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderContainer {
+    div {
+      img {
+        max-width: 900px;
+      }
+    }
+
+    .sliderControl {
+      max-width: 900px;
     }
   }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 import { SliderImages } from '../../data/sliderImages'
 import styles from './ImageSlider.module.scss'
 import { MdChevronRight } from 'react-icons/md'
@@ -29,7 +28,7 @@ const ImageSlider = () => {
             <div className={current === index ? `slide active` : 'slide'}
               key={index}
             >
-              { index === current && (<Image src={slide.image} alt={slide.title} width={1600} height={700} intrinsic="true"/>)}
+              { index === current && (<img src={slide.image} alt={slide.title}/>)}
             </div>
           )
         })

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
 import styles from './Footer.module.scss'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
@@ -28,7 +27,7 @@ const Footer = () => {
     Email: ${formData.email}\n
     Phone: ${formData.phone}
     `
-    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=hello@serunicreative.com&su=${formData.type}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:hello@serunicreative.com?subject=${formData.type}&body=${encodeURIComponent(body)}`
   }
 
   const handleFormChange = (e) => {
@@ -52,7 +51,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer} id="contact-us">
       <div className={styles.footerImage}>
-        <Image src="/img/badge.png" alt="Footer Badge" width={302} height={146} intrinsic="true" />
+        <img src="/img/badge.png" alt="Footer Badge"/>
       </div>
       <div className={styles.footerForm}>
         <form onSubmit={handleEmailSubmit}>
