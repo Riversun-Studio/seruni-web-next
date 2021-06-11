@@ -102,10 +102,9 @@ export default function Home() {
               <figcaption className={styles.cardContent}>
                 <h2>Digital Campaign</h2>
                 <p>
-                  No no, we don’t run a campaign with flyers or roaring motorcycles.
-                  We use fact, data, combined with creativity to ensure your message
-                  is well conveyed to our audience. If needed, we will work with
-                  influencers and communities to support the campaign.
+                No no, we don’t run a campaign with roaring motorcycles. 
+                We combine data and creativity to ensure your message is well conveyed to our audience. 
+                If needed, we will work with influencers.
                   </p>
               </figcaption>
             </figure>
