@@ -262,7 +262,7 @@
             bottom: 0;
             margin: 0;
             img {
-              max-width: 350px;
+              max-width: 270px;
             }
           }
 
@@ -318,7 +318,14 @@
         .servicesGrid {
           column-gap: 15%;
 
+          .sectionIllustration {
+            img {
+              max-width: 300px;
+            }
+          }
+
           .servicesCard {
+            
             .cardContent {
               p {
                 font-size: 0.9rem;
@@ -352,6 +359,13 @@
       .ourServices {
         .servicesGrid {
           column-gap: 25%;
+
+          .sectionIllustration {
+            img {
+              max-width: 350px;
+            }
+          }
+
           .servicesCard {
             .cardContent {
               h2 {
