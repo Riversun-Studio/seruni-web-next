@@ -127,7 +127,7 @@
   .footer {
     display: grid;
     grid-template-areas: "image image" "info form";
-    padding: 0 15%;
+    padding: 0 1.5rem;
     padding-bottom: 6rem;
     column-gap: 3rem;
     .footerImage {
