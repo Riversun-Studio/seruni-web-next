@@ -349,7 +349,7 @@
       .ourServices,
       .ourWork,
       .clients {
-        padding: 3rem 13%;
+        padding: 3rem 12%;
       }
 
       .home {
@@ -362,7 +362,9 @@
 
           .sectionIllustration {
             img {
+              width: 100%;
               max-width: 350px;
+              height: auto;
             }
           }
 
@@ -380,7 +382,7 @@
         .clientImage {
           img {
             width: 100%;
-            max-width: 850px;
+            max-width: 1000px;
             height: auto;
           }
         }
