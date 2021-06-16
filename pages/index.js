@@ -57,7 +57,7 @@ export default function Home() {
         <section className={styles.ourServices} id="our-services">
           <section className={styles.textureOverlay}
             style={{
-              backgroundImage: "url(/img/BG_Transparent.webp)",
+              backgroundImage: "url(/img/BG_Transparent.png)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center"
