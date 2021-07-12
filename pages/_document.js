@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          {/* <script
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
             defer
@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
             });
           `,
             }}
-          /> */}
+          /> 
         </Head>
         <body>
           <Main />
