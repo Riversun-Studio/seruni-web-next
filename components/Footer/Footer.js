@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Footer.module.scss'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import emailjs from 'emailjs-com'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Footer = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const [formData, setFormData] = useState({
     type: "Client Inquiries",
@@ -19,15 +23,21 @@ const Footer = () => {
 
   const handleEmailSubmit = (e) => {
     e.preventDefault()
-    const body =
-      `${formData.message}\n\n
-    From: ${formData.email}\n
-    Name: ${formData.name}\n
-    Company: ${formData.company}\n
-    Email: ${formData.email}\n
-    Phone: ${formData.phone}
-    `
-    window.location.href = `mailto:hello@serunicreative.com?subject=${formData.type}&body=${encodeURIComponent(body)}`
+    setIsLoading(true)
+    emailjs.sendForm('service_p91v1jg', 'template_owpq00m', e.target, 'user_wJwanmXN8wIV1drPmPJvf')
+      .then((result) => {
+        toast.success('Message Sent!', {
+          duration: 3000,
+          position: 'top-right',
+        })
+      }, (error) => {
+        toast.error(error.text, {
+          duration: 3000,
+          position: 'top-right',
+        })
+      }).finally(() => {
+        setIsLoading(false)
+      })
   }
 
   const handleFormChange = (e) => {
@@ -48,8 +58,20 @@ const Footer = () => {
     })
   }
 
+
+
   return (
     <footer className={styles.footer} id="contact-us">
+      <Toaster
+        toastOptions={{
+          className: '',
+          style: {
+            border: '2px solid #eebc25',
+            borderRadius: '8px',
+            padding: '0.5rem 1rem'
+          },
+        }}
+      />
       <div className={styles.footerImage}>
         <img src="/img/badge.png" alt="Footer Badge" />
       </div>
@@ -114,7 +136,16 @@ const Footer = () => {
               value={formData.message} />
           </div>
 
-          <button className={styles.formButton} name="send" title="send" type="submit">Send!</button>
+          {
+            isLoading &&
+            <button className={styles.formButton} name="send" title="send">Sending...</button>
+          }
+
+          {
+            !isLoading &&
+            <button className={styles.formButton} name="send" title="send" type="submit">Send!</button>
+          }
+
         </form>
       </div>
       <div className={styles.footerInfo}>
