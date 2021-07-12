@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Footer.module.scss'
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
 
@@ -51,7 +51,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer} id="contact-us">
       <div className={styles.footerImage}>
-        <img src="/img/badge.png" alt="Footer Badge"/>
+        <img src="/img/badge.png" alt="Footer Badge" />
       </div>
       <div className={styles.footerForm}>
         <form onSubmit={handleEmailSubmit}>
@@ -119,7 +119,7 @@ const Footer = () => {
       </div>
       <div className={styles.footerInfo}>
         <p className={styles.subtitle}>hello@serunicreative.com</p>
-        <p className={styles.subtitle}>+6222-20465155</p>
+        <p className={styles.subtitle}>WhatsApp : 0813-2020-2002</p>
         <p className={styles.subtitle}>or pop us a visit at :</p>
 
         <div className={styles.socialMedia}>
@@ -128,9 +128,9 @@ const Footer = () => {
           <a href="https://www.instagram.com/serunicreative/" target="_blank" rel="noopener noreferrer" name="instagram"><FaInstagram /></a>
         </div>
 
-        <p className={styles.copywrite}>Brings You Joy | &copy; 2020 Seruni</p>
+        <p className={styles.copywrite}>Brighten Your Day | &copy; 2021 Seruni</p>
       </div>
-    </footer>
+    </footer >
   )
 }
 
