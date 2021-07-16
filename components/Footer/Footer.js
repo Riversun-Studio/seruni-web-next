@@ -31,12 +31,12 @@ const Footer = () => {
       Subject: `Seruni Creative! ${formData.type}`,
       Body: generateEmailBody()
     }).catch(message => {
-      return toast.error(message, {
+      toast.error(message, {
         duration: 3000,
         position: 'top-right',
       })
     }).then((message) => {
-      return toast.success('Message Sent!', {
+      toast.success('Message Sent!', {
         duration: 3000,
         position: 'top-right',
       })
