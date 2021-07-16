@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Footer.module.scss'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import emailjs from 'emailjs-com'
 import toast, { Toaster } from 'react-hot-toast'
 
 const Footer = () => {
