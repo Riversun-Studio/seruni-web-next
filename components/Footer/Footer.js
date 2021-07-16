@@ -41,10 +41,6 @@ const Footer = () => {
         position: 'top-right',
       })
     }).finally(() => {
-      toast.success('Message Sent!', {
-        duration: 3000,
-        position: 'top-right',
-      })
       setIsLoading(false)
     })
   }
