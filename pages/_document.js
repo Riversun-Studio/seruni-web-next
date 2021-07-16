@@ -27,8 +27,8 @@ export default class MyDocument extends Document {
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            defer
           />
+          <script async src="https://smtpjs.com/v3/smtp.js"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `

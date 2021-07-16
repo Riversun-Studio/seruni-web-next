@@ -24,20 +24,46 @@ const Footer = () => {
   const handleEmailSubmit = (e) => {
     e.preventDefault()
     setIsLoading(true)
-    emailjs.sendForm('service_p91v1jg', 'template_owpq00m', e.target, 'user_wJwanmXN8wIV1drPmPJvf')
-      .then((result) => {
-        toast.success('Message Sent!', {
-          duration: 3000,
-          position: 'top-right',
-        })
-      }, (error) => {
-        toast.error(error.text, {
-          duration: 3000,
-          position: 'top-right',
-        })
-      }).finally(() => {
-        setIsLoading(false)
+
+    Email.send({
+      SecureToken: '744214bc-e855-4506-bc7f-68f3dca23ac1',
+      To: 'hello@serunicreative.com',
+      From: "hello@serunicreative.com",
+      Subject: `Seruni Creative! ${formData.type}`,
+      Body: generateEmailBody()
+    }).catch(message => {
+      return toast.error(message, {
+        duration: 3000,
+        position: 'top-right',
       })
+    }).then((message) => {
+      return toast.success('Message Sent!', {
+        duration: 3000,
+        position: 'top-right',
+      })
+      console.log(message)
+    }).finally(() => {
+      toast.success('Message Sent!', {
+        duration: 3000,
+        position: 'top-right',
+      })
+      setIsLoading(false)
+    })
+  }
+
+  const generateEmailBody = () => {
+    const body =
+      `<html>
+        <p><strong>Email Type: </strong>${formData?.type || '-'}</p>
+        <p><strong>From: </strong> ${formData?.name || '-'}</p>
+        <p><strong>Company: </strong>${formData?.company || '-'}</p>
+        <p><strong>Email: </strong> ${formData?.email || '-'}</p>
+        <p><strong>Phone: </strong> ${formData?.phone || '-'}</p>
+        <strong>Message: </strong>
+        <blockquote>${formData?.message || '-'}</blockquote>
+      </html>`
+
+    return body
   }
 
   const handleFormChange = (e) => {
