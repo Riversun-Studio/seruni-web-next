@@ -42,6 +42,7 @@ const Footer = () => {
       })
     }).finally(() => {
       setIsLoading(false)
+      clearForm()
     })
   }
 
