@@ -79,8 +79,6 @@ const Footer = () => {
     })
   }
 
-
-
   return (
     <footer className={styles.footer} id="contact-us">
       <Toaster
